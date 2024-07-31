@@ -32,12 +32,42 @@ const addTodo = () => {
     return;
   }
 
+  function getFormattedDateTime() {
+    const date = new Date();
+
+    const daysOfWeek = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ];
+    const day = daysOfWeek[date.getDay()];
+
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const dayOfMonth = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+
+    let hours = date.getHours();
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // The hour '0' should be '12'
+    const formattedHours = String(hours).padStart(2, '0');
+
+    return `${day}, ${month}/${dayOfMonth}/${year}, ${formattedHours}:${minutes}:${seconds} ${ampm}`;
+  }
+
   todos.value.push({
     content: input_content.value,
     category: input_category.value,
     done: false,
     editable: false,
-    createdAt: new Date().getTime(),
+    createdAt: getFormattedDateTime(),
   });
   input_content.value = '';
   input_category.value = '';
@@ -128,9 +158,11 @@ onMounted(() => {
           </label>
 
           <div class="todo-content">
-            <input type="text" v-model="todo.content" />
+            <textarea type="text" v-model="todo.content" /> <br>
+            <span>{{ todo.createdAt }}</span>
           </div>
 
+          
           <div class="actions">
             <button class="delete" @click="removeTodo(todo)">Delete</button>
           </div>
