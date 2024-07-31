@@ -26,8 +26,8 @@
   position: absolute;
   right: 20%;
   left: 20%;
-  top: 75px;
-  bottom: 75px;
+  top: 0;
+  bottom: 0;
   box-shadow: 0 1px 5px var(--personal);
   overflow-x: hidden;
   overflow-y: scroll;
@@ -40,7 +40,6 @@ button {
   outline: none;
   background: none;
   cursor: initial;
-  width: 100%;
 }
 
 body {
@@ -72,8 +71,16 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+.greeting {
+  display: flex;
+  align-items: center;
+}
+
 .greeting .title {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
 }
 
 .greeting .title input {
@@ -248,8 +255,6 @@ input:checked ~ .bubble::after {
   color: var(--grey);
 }
 
-
-
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -263,4 +268,87 @@ input:checked ~ .bubble::after {
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: var(--dark);
+}
+
+@media only screen and (min-width: 320px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .app {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .create-todo .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
