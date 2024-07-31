@@ -217,6 +217,10 @@ input:checked ~ .bubble::after {
   cursor: pointer;
 }
 
+.todo-item input {
+  width: 70%;
+}
+
 .todo-item .todo-content {
   flex: 1 1 0%;
 }
