@@ -137,5 +137,20 @@ onMounted(() => {
         </div>
       </div>
     </section>
+    <footer>
+      <p>© 2024 Moe Ezzeldin. All rights reserved.</p>
+      <p>
+        This is a personal project created for learning purposes. Use at your
+        own risk.
+      </p>
+      <p>
+        Todo App: A simple application to manage your tasks locally. Feedback
+        and suggestions are welcome!
+      </p>
+      <p>
+        Contact:
+        <a href="mailto:ezzeldin.mo3@gmail.com:">Ezzeldin.mo3@gmail.com</a>
+      </p>
+    </footer>
   </main>
 </template>

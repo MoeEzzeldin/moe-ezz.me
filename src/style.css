@@ -276,7 +276,15 @@ input:checked ~ .bubble::after {
   border-radius: 20px;
   background-color: var(--dark);
 }
-
+footer {
+  font-size: 0.8em;
+  color: #777;
+  text-align: center;
+  padding: 1em 0;
+}
+footer p {
+  margin: 0.5em 0;
+}
 @media only screen and (min-width: 320px) {
   .create-todo .options {
     display: grid;
