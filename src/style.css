@@ -20,17 +20,20 @@
   font-family: 'montserrat', sans-serif;
 }
 
+html {
+  background-color: var(--dark);
+}
 .app {
-  border: 2px solid var(--dark);
+  background-color: #ffff;
   border-radius: 20px 10px 10px 20px;
   position: absolute;
-  right: 20%;
-  left: 20%;
   top: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
   box-shadow: 0 1px 5px var(--personal);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 input:not([type='radio']):not([type='checkbox']),
@@ -271,11 +274,6 @@ input:checked ~ .bubble::after {
 }
 
 @media only screen and (min-width: 320px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -284,11 +282,6 @@ input:checked ~ .bubble::after {
   }
 }
 @media only screen and (min-width: 480px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -298,11 +291,6 @@ input:checked ~ .bubble::after {
 }
 
 @media only screen and (min-width: 768px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -312,11 +300,6 @@ input:checked ~ .bubble::after {
 }
 
 @media only screen and (min-width: 992px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -326,11 +309,6 @@ input:checked ~ .bubble::after {
 }
 
 @media only screen and (min-width: 1025px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -340,11 +318,6 @@ input:checked ~ .bubble::after {
 }
 
 @media only screen and (min-width: 1281px) {
-  .app {
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
   .create-todo .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
